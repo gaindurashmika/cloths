@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Premium Clothing Store</title>
+    <meta name="description" content="Discover the latest fashion trends with StyleHub. Shop for men's, women's, and kids' clothing with premium quality and affordable prices.">
+    
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-tshirt"></i>
+                <span>StyleHub</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#men" class="nav-link">Men</a>
+                <a href="#women" class="nav-link">Women</a>
+                <a href="#kids" class="nav-link">Kids</a>
+                <a href="#accessories" class="nav-link">Accessories</a>
+                <a href="#sale" class="nav-link">Sale</a>
+                <a href="#trends" class="nav-link">Trends</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="wishlist-btn" id="wishlistBtn">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </button>
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="search-container">
+                <input type="text" placeholder="Search for products, brands, or categories..." id="searchInput">
+                <button class="search-submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="search-close" id="searchClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">
+                    Discover Your
+                    <span class="gradient-text">Perfect Style</span>
+                </h1>
+                <p class="hero-description">
+                    Explore our latest collection of trendy clothing for men, women, and kids. Quality fashion at affordable prices with free shipping on orders over $50.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Shop Now</button>
+                    <button class="btn btn-secondary">View Collection</button>
+                    <button class="btn btn-ghost">Learn More</button>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Fashion Collection">
+                </div>
+                <div class="floating-tag">
+                    <span>New Arrivals</span>
+                </div>
+                <div class="hero-stats-mini">
+                    <div class="stat-mini">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Free Shipping</span>
+                    </div>
+                    <div class="stat-mini">
+                        <i class="fas fa-undo"></i>
+                        <span>30 Day Returns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-stats">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-number" data-target="1000">0</div>
+                <div class="stat-label">Products</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-number" data-target="5000">0</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Brands</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">Hour Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-subtitle">Find your perfect style in our curated collections</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Men's Fashion">
+                        <div class="category-overlay">
+                            <h3>Men's Fashion</h3>
+                            <p>Trendy styles for the modern man</p>
+                            <button class="category-btn">Shop Men</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Women's Fashion">
+                        <div class="category-overlay">
+                            <h3>Women's Fashion</h3>
+                            <p>Elegant designs for every occasion</p>
+                            <button class="category-btn">Shop Women</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kids Fashion">
+                        <div class="category-overlay">
+                            <h3>Kids Fashion</h3>
+                            <p>Comfortable and stylish for little ones</p>
+                            <button class="category-btn">Shop Kids</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Accessories">
+                        <div class="category-overlay">
+                            <h3>Accessories</h3>
+                            <p>Complete your look with style</p>
+                            <button class="category-btn">Shop Accessories</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Our most popular and trending items</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Casual T-Shirt">
+                        <div class="product-badges">
+                            <span class="badge new">New</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="action-btn quickview">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Cotton T-Shirt</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$29.99</span>
+                            <span class="old-price">$39.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Denim Jeans">
+                        <div class="product-badges">
+                            <span class="badge sale">Sale</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="action-btn quickview">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Classic Denim Jeans</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$59.99</span>
+                            <span class="old-price">$79.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Summer Dress">
+                        <div class="product-badges">
+                            <span class="badge hot">Hot</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="action-btn quickview">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Elegant Summer Dress</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$89.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Casual Jacket">
+                        <div class="product-actions">
+                            <button class="action-btn wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="action-btn quickview">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Casual Denim Jacket</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$69.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sneakers">
+                        <div class="product-badges">
+                            <span class="badge new">New</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="action-btn quickview">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Comfortable Sneakers</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$79.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Handbag">
+                        <div class="product-actions">
+                            <button class="action-btn wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="action-btn quickview">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Stylish Handbag</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$49.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-container" data-aos="fade-up">
+                <button class="btn btn-secondary">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">New Arrivals</h2>
+                <p class="section-subtitle">Fresh styles just in - be the first to shop the latest trends</p>
+            </div>
+            
+            <div class="new-arrivals-slider" data-aos="fade-up">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="slider-item">
+                            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="New Style 1">
+                            <div class="slider-overlay">
+                                <h3>Summer Collection</h3>
+                                <button class="btn btn-primary">Shop Now</button>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="New Style 2">
+                            <div class="slider-overlay">
+                                <h3>Casual Wear</h3>
+                                <button class="btn btn-primary">Shop Now</button>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="New Style 3">
+                            <div class="slider-overlay">
+                                <h3>Formal Collection</h3>
+                                <button class="btn btn-primary">Shop Now</button>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="New Style 4">
+                            <div class="slider-overlay">
+                                <h3>Street Style</h3>
+                                <button class="btn btn-primary">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sale Section -->
+    <section id="sale" class="sale-section">
+        <div class="container">
+            <div class="sale-content">
+                <div class="sale-text" data-aos="fade-right">
+                    <h2 class="sale-title">Summer Sale</h2>
+                    <h3 class="sale-subtitle">Up to 70% Off</h3>
+                    <p class="sale-description">
+                        Don't miss out on our biggest sale of the year! Get amazing discounts on summer clothing, accessories, and more. Limited time offer - shop now before it's gone!
+                    </p>
+                    <div class="countdown" data-aos="fade-up">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                    <div class="sale-buttons">
+                        <button class="btn btn-primary">Shop Sale</button>
+                        <button class="btn btn-ghost">View All Deals</button>
+                    </div>
+                </div>
+                
+                <div class="sale-image" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Summer Sale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trends Section -->
+    <section id="trends" class="trends-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Fashion Trends</h2>
+                <p class="section-subtitle">Stay ahead with the latest fashion trends and style tips</p>
+            </div>
+            
+            <div class="trends-grid">
+                <div class="trend-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="trend-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Trend 1">
+                    </div>
+                    <div class="trend-content">
+                        <h3>Summer 2024 Trends</h3>
+                        <p>Discover the hottest summer fashion trends that will make you stand out this season.</p>
+                        <a href="#" class="trend-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="trend-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="trend-image">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Trend 2">
+                    </div>
+                    <div class="trend-content">
+                        <h3>Sustainable Fashion</h3>
+                        <p>Learn about eco-friendly fashion choices and how to build a sustainable wardrobe.</p>
+                        <a href="#" class="trend-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="trend-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="trend-image">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Trend 3">
+                    </div>
+                    <div class="trend-content">
+                        <h3>Style Guide</h3>
+                        <p>Get expert tips on how to mix and match your clothes for the perfect outfit.</p>
+                        <a href="#" class="trend-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Real feedback from satisfied customers</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Amazing quality and fast delivery! The clothes fit perfectly and look exactly like the photos. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah M.">
+                            <div>
+                                <h4>Sarah M.</h4>
+                                <span>Verified Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Great customer service and excellent return policy. The website is easy to navigate and the products are top-notch!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="John D.">
+                            <div>
+                                <h4>John D.</h4>
+                                <span>Verified Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"I love the variety of styles and the affordable prices. My go-to place for trendy fashion!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Emily R.">
+                            <div>
+                                <h4>Emily R.</h4>
+                                <span>Verified Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2 class="section-title">About StyleHub</h2>
+                    <p class="about-description">
+                        We are passionate about bringing you the latest fashion trends at affordable prices. Our carefully curated collection features high-quality clothing for men, women, and kids, ensuring everyone can express their unique style.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Free Shipping on Orders Over $50</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30-Day Return Policy</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 Customer Support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-award"></i>
+                            <span>Quality Guaranteed</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Worldwide Shipping</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Our Store">
+                    </div>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-text">Years Experience</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-text">Brands</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest fashion trends, exclusive offers, and early access to sales</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <div class="newsletter-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-gift"></i>
+                        <span>Exclusive Offers</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-clock"></i>
+                        <span>Early Access</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-tag"></i>
+                        <span>Special Discounts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="contact-description">
+                        Have questions about our products or need assistance? We're here to help! Our customer support team is available 24/7 to assist you.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Fashion Street, Style City, SC 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@stylehub.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Mon - Fri: 9:00 AM - 8:00 PM<br>Sat - Sun: 10:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-contact">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="order">Order Status</option>
+                                <option value="return">Returns & Exchanges</option>
+                                <option value="product">Product Information</option>
+                                <option value="technical">Technical Support</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-tshirt"></i>
+                        <span>StyleHub</span>
+                    </div>
+                    <p>Your one-stop destination for trendy and affordable fashion. Quality clothing for the whole family with exceptional customer service.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#men">Men's Clothing</a></li>
+                        <li><a href="#women">Women's Clothing</a></li>
+                        <li><a href="#kids">Kids' Clothing</a></li>
+                        <li><a href="#accessories">Accessories</a></li>
+                        <li><a href="#sale">Sale Items</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Email Support</a></li>
+                        <li><a href="#">Phone Support</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 StyleHub. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+                </div>
+                <p class="footer-heart">Made with ❤️ for fashion lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0.00</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary btn-full">Continue Shopping</button>
+                <button class="btn btn-primary btn-full">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3>My Wishlist</h3>
+            <button class="wishlist-close" id="wishlistClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="wishlist-items" id="wishlistItems">
+            <!-- Wishlist items will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
